@@ -1,0 +1,28 @@
+.ant-layout-header #title{
+    float: left;
+    width: 165px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.ant-layout-header #title span{
+    color: #1890ff;
+}
+.ant-layout-header .logo {
+    z-index: 100;
+    width: 120px;
+    height: 31px;
+    background: rgba(255,255,255,.2);
+    float: left;
+}
+.ant-layout-header #header-right{
+    float: right;
+}
+.ant-layout-header .logo {
+    float: left;
+    z-index: 100;
+    width: 80px;
+    height: 100px;
+    margin-left: 40px;
+    background:url("../img/logo-1.png") no-repeat left center;
+}
