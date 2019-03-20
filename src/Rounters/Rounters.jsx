@@ -25,7 +25,6 @@ class Rounters extends Component {
         return (
            <Router>
                <div>
-
                    <Switch>
                        <Route path="/Login" component={LoginDemo} />
                        <Route path="/Register" component={Register} />

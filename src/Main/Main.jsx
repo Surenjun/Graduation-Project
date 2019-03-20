@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import {Carousel, Col, Icon, Row} from "antd";
+import {Carousel, Col, Icon, Row } from "antd";
 import Slider from "../Slider/Slider";
-import HighChart from "../HighChart/HighChart"
+
+import asyncComponent from "../Tools/AsyncHighChart.js";
+const HighChart = asyncComponent(() => import("../HighChart/HighChart"));
 
 class Main extends Component {
-
     render() {
         return (
             <div>
@@ -18,7 +19,7 @@ class Main extends Component {
                             <div/>
                             <div/>
                             <div/>
-                        </Carousel>,
+                        </Carousel>
                     </Col>
                 </Row>
                 <div id="advance-panel">
@@ -91,7 +92,7 @@ class Main extends Component {
                         </div>
                     </div>
                 </div>
-                 <HighChart/>
+                <HighChart/>
                 <main className="main restraint">
                     <section className="main__title-section"><h2 className="title-text__head"><span className="text">数据融合</span>
                         <span className="slash">/</span> <span className="text">消费者洞察</span> <span className="slash">/</span>
