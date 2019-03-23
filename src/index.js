@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import 'ant-design-pro/dist/ant-design-pro.css';
 import 'ant-design-icons/dist/anticons.min.css';
 
 import App from './App';
