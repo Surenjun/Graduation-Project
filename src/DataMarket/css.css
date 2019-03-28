@@ -41,9 +41,15 @@ p.dataNum{
     margin-bottom: 15px;
 }
 
-.span_app {
+.green{
     border: 1px solid #49b9a1 !important;
     color: #49b9a1 !important;
+    display: inline-block;
+    transform: scale(.8);
+}
+.blue{
+    border: 1px solid #4178e5 !important;
+    color: #4178e5 !important;
     display: inline-block;
     transform: scale(.8);
 }

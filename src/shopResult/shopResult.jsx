@@ -36,6 +36,7 @@ class shopResult extends Component {
             const pagination = { ..._this.state.pagination };
             pagination.total = count;
             const data = response.data.result.data;
+            console.log(data);
             data.forEach((item,key) =>{
                 item.image =  <img style={{width:"50px"}} src={item.item_image}/>;
                 item.shop_title =  <span style={{color: '#1890ff'}}>{item.shop_title}</span>;

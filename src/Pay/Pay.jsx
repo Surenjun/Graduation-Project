@@ -9,7 +9,15 @@ import union from "../img/union.png"
 
 const RadioGroup = Radio.Group;
 
+let {goodName ,goodPrice,goodId} = ["","",""];
 class Pay extends Component {
+    componentWillMount() {
+        console.log(this.props);
+        goodName = this.props.location.state.goodName;
+        goodPrice = this.props.location.state.goodPrice;
+        goodId = this.props.location.state.goodId;
+    }
+
     state = {
         num : 0,
         ifNotice:false
@@ -23,7 +31,7 @@ class Pay extends Component {
     }
     sendPay(){
         const hide = message.loading('正在支付..', 0);
-        setTimeout(hide, 25000);
+        setTimeout(hide, 2500);
     }
     onChange(e) {
         const bool = e.target.checked;
@@ -60,18 +68,18 @@ class Pay extends Component {
                                        </thead>
                                        <tbody>
                                        <tr>
-                                           <td>商品零售数据查询</td>
+                                           <td>{goodName}</td>
                                            <td>1个月</td>
                                            <td></td>
                                            <td>1</td>
-                                           <td>￥199.00</td>
+                                           <td>￥{goodPrice}</td>
                                        </tr>
                                        </tbody>
                                    </table>
                                    <span>友情提示：如需开具发票，请咨询400-6032-580</span>
                                </div>
                                <div className="dingdan_qrtitle dingdan_newqrtitle" style={{paddingLeft:"0"}}>
-                                   <div className="dingdan_qrzonge">应付总额：<b>¥199.00</b></div>
+                                   <div className="dingdan_qrzonge">应付总额：<b>¥{goodPrice}</b></div>
                                </div>
                                <div className="dingdan_xieyi_frame">
                                    <div className="dingdan_xieyi">

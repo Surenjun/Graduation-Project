@@ -1,69 +1,217 @@
 import React, {Component} from 'react';
-import { Tabs } from 'antd';
+import {Spin, Tabs} from 'antd';
 import { Row, Col ,Pagination} from 'antd';
 import { Link} from 'react-router-dom'
 import "./css.css"
+const  axios = require("axios");
 const TabPane = Tabs.TabPane;
 function callback(key) {
-    console.log(key);
+    console.log(this.state.key);
+    this.setState({
+        key
+    })
 }
 
 function onChange(pageNumber) {
-    console.log('Page: ', pageNumber);
+    const num = pageNumber;
+    this.setState({
+        pageNum : num ,
+        pageData : this.state.data.slice( (num-1) * 10, num * 10)
+    })
 }
 
 class DataMarket extends Component {
+    state = {
+        key:"1",
+        loading:true,
+        data:{
+            length:""
+        },
+        pageData:null
+    }
+    componentDidMount() {
+        axios.post('http://surenjun.com:3131/getGoods').then(res =>{
+            console.log(res.data);
+            this.setState({
+                loading:false,
+                data:res.data,
+                pageData:res.data.slice( 0, 10)
+            })
+        })
 
+
+    }
     render() {
         return (
             <div>
 
                 <Row>
                     <Col span={22} >
-                        <p className={"dataNum"}>共找到数据<span className={"redSpan"}>163</span>条</p>
+                        <p className={"dataNum"}>共找到数据<span className={"redSpan"}>{this.state.data.length}</span>条</p>
                     </Col>
                 </Row>
 
                 <Row type="flex" justify="center">
                     <Col span={17} >
-                        <Tabs onChange={callback} type="card">
+                        <Tabs onChange={callback.bind(this)} type="card">
                             <TabPane tab="全部" key="1">
-                                <Row className={"datalist"} justify="space-around">
-                                    <Col span={3}>
-                                        <img src="https://dfs1.tdata.cn/group1/M00/00/04/rBYDCVt-Tf6AJzj9AAAmFi2bnZ4950.png"/>
-                                    </Col>
-                                    <Col span={15}>
-                                        <h4>
-                                            <Link to={"/DataMarket/Detail"}>商品零售数据查询</Link>
-                                            <p>提供部分主流电商平台店铺和商品多维分析数据，可用于体验。</p>
-                                        </h4>
-                                        <Row>
-                                            <Col span={6}><p>供应商：天元数据库</p></Col>
-                                            <Col span={18}>
-                                                交付方式：
-                                                <span className="span_app">应用</span>
-                                            </Col>
-                                        </Row>
-                                    </Col>
-                                    <Col span={4}>
-                                        <div className={"goodsprice"}>
-                                            ￥199.00起
-                                        </div>
-                                    </Col>
-                                </Row>
+                                {
+                                    this.state.loading
+                                        ? (<div style={{padding:"130px 20px",textAlign:'center'}}><Spin/></div>)
+                                        : (
+                                            this.state.pageData.map(item =>
+                                                <Row className={"datalist"} justify="space-around">
+                                                    <Col span={3}>
+                                                        <img src={item.image}/>
+                                                    </Col>
+                                                    <Col span={15}>
+                                                        <h4>
+                                                            <Link to={{ pathname: "/DataMarket/Detail", search: `?name=${item._id}` }}>
+                                                                {item.goodName}
+                                                            </Link>
+                                                            <p>{item.goodDetail}</p>
+                                                        </h4>
+                                                        <Row>
+                                                            <Col span={6}><p>供应商：天元数据库</p></Col>
+                                                            <Col span={18}>
+                                                                交付方式：
+                                                                {
+                                                                    item.goodName === "商品零售数据查询"
+                                                                    ?(<span className={item.goodType}>应用</span>)
+                                                                    :(<span className={item.goodType}>
+                                                                     {item.goodType === "green"?"报告":"CSV"}
+                                                                </span>)
+                                                                }
+                                                            </Col>
+                                                        </Row>
+                                                    </Col>
+                                                    <Col span={4}>
+                                                        <div className={"goodsprice"}>
+                                                            ￥{item.goodPrice}起
+                                                        </div>
+                                                    </Col>
+                                                </Row>
+                                            )
+                                        )
+                                }
                             </TabPane>
-                            <TabPane tab="API" key="2">Content of Tab Pane 2</TabPane>
-                            <TabPane tab="数据集" key="3">Content of Tab Pane 3</TabPane>
-                            <TabPane tab="数据报告" key="4">Content of Tab Pane 4</TabPane>
-                            <TabPane tab="数据应用" key="5">Content of Tab Pane 5</TabPane>
+                            <TabPane tab="API" key="2"/>
+                            <TabPane tab="数据集" key="3">
+                                {
+                                    this.state.loading
+                                        ? (<div style={{padding:"130px 20px",textAlign:'center'}}><Spin/></div>)
+                                        : (
+                                            this.state.pageData.map(item =>
+                                               item.goodType === "blue"
+                                                ? <Row className={"datalist"} justify="space-around">
+                                                       <Col span={3}>
+                                                           <img src={item.image}/>
+                                                       </Col>
+                                                       <Col span={15}>
+                                                           <h4>
+                                                               <Link to={"/DataMarket/Detail"}>{item.goodName}</Link>
+                                                               <p>{item.goodDetail}</p>
+                                                           </h4>
+                                                           <Row>
+                                                               <Col span={6}><p>供应商：天元数据库</p></Col>
+                                                               <Col span={18}>
+                                                                   交付方式：
+                                                                   {
+                                                                       item.goodName === "商品零售数据查询"
+                                                                           ?(<span className={item.goodType}>应用</span>)
+                                                                           :(<span className={item.goodType}>
+                                                                     {item.goodType === "green"?"报告":"CSV"}
+                                                                </span>)
+                                                                   }
+                                                               </Col>
+                                                           </Row>
+                                                       </Col>
+                                                       <Col span={4}>
+                                                           <div className={"goodsprice"}>
+                                                               ￥{item.goodPrice}起
+                                                           </div>
+                                                       </Col>
+                                                   </Row> :""
+                                            )
+                                        )
+                                }
+                            </TabPane>
+                            <TabPane tab="数据报告" key="4">
+                                {
+                                    this.state.loading
+                                        ? (<div style={{padding:"130px 20px",textAlign:'center'}}><Spin/></div>)
+                                        : (
+                                            this.state.pageData.map(item =>
+                                                item.goodType === "green"
+                                                    ? <Row className={"datalist"} justify="space-around">
+                                                        <Col span={3}>
+                                                            <img src={item.image}/>
+                                                        </Col>
+                                                        <Col span={15}>
+                                                            <h4>
+                                                                <Link to={"/DataMarket/Detail"}>{item.goodName}</Link>
+                                                                <p>{item.goodDetail}</p>
+                                                            </h4>
+                                                            <Row>
+                                                                <Col span={6}><p>供应商：天元数据库</p></Col>
+                                                                <Col span={18}>
+                                                                    交付方式：
+                                                                    {
+                                                                        item.goodName === "商品零售数据查询"
+                                                                            ?(<span className={item.goodType}>应用</span>)
+                                                                            :(<span className={item.goodType}>
+                                                                     {item.goodType === "green"?"报告":"CSV"}
+                                                                </span>)
+                                                                    }
+                                                                </Col>
+                                                            </Row>
+                                                        </Col>
+                                                        <Col span={4}>
+                                                            <div className={"goodsprice"}>
+                                                                ￥{item.goodPrice}起
+                                                            </div>
+                                                        </Col>
+                                                    </Row> :""
+                                            )
+                                        )
+                                }
+                            </TabPane>
+                            <TabPane tab="数据应用" key="5">
+                                <Row className={"datalist"} justify="space-around">
+                                                        <Col span={3}>
+                                                            <img src="https://dfs1.tdata.cn/group1/M00/00/04/rBYDCVt-Tf6AJzj9AAAmFi2bnZ4950.png"/>
+                                                        </Col>
+                                                        <Col span={15}>
+                                                            <h4>
+                                                                <Link to={"/DataMarket/Detail"}>商品零售数据查询</Link>
+                                                                <p>提供部分主流电商平台店铺和商品多维分析数据，可用于体验。</p>
+                                                            </h4>
+                                                            <Row>
+                                                                <Col span={6}><p>供应商：天元数据库</p></Col>
+                                                                <Col span={18}>
+                                                                    交付方式：
+                                                                   <span className="green">应用</span>
+
+                                                                </Col>
+                                                            </Row>
+                                                        </Col>
+                                                        <Col span={4}>
+                                                            <div className={"goodsprice"}>
+                                                                ￥199.00起
+                                                            </div>
+                                                        </Col>
+                                                    </Row>
+                            </TabPane>
                         </Tabs>
-                        <Pagination
-                            style={{float:'right',marginRight:"30px",marginTop:"30px"}}
-                            showQuickJumper
-                            defaultCurrent={2}
-                            total={500}
-                            onChange={onChange}
-                        />
+                        {
+                            this.state.key === "1"
+                                ?<Pagination
+                                    style={{float:'right',marginRight:"30px",marginTop:"30px"}}
+                                    defaultCurrent={1}
+                                    total={this.state.data.length}
+                                    onChange={onChange.bind(this)}
+                                />:""
+                        }
                     </Col>
 
                     <Col span={5} >
