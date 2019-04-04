@@ -14,8 +14,8 @@
 #loginLogo {
     position: absolute;
     left: 50%;
-    margin-top: -300px;
-    margin-left: -20px;
+    top:50%;
+    margin-top: -5%;
     width: 100px;
     height: 100px;
     background:url("../img/logo-1.png") no-repeat left center;

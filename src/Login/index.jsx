@@ -3,6 +3,7 @@ import "./index.css"
 
 import Login from 'ant-design-pro/lib/Login';
 import { Alert, Checkbox } from 'antd';
+import { Link } from 'react-router-dom'
 
 const { Tab, UserName, Password, Mobile, Captcha, Submit } = Login;
 
@@ -21,7 +22,7 @@ class LoginDemo extends Component {
         if (!err && (values.username !== '请输入账号' || values.password !== '请输入密码')) {
           setTimeout(() => {
             this.setState({
-              notice: '',
+              notice: '用户名或者密码错误',
             });
           }, 500);
         }
@@ -39,7 +40,6 @@ class LoginDemo extends Component {
     });
   }
   componentWillMount() {
-    console.log(1);
     const userHeight = document.body.clientHeight + "px";
     document.documentElement.style.setProperty( '--userHeight', userHeight)
   }
@@ -48,14 +48,14 @@ class LoginDemo extends Component {
     return (
          <div id="container-login">
 
+           {/*<div id="loginLogo"/>*/}
+
            <Login
                style={{width:"400px"}}
                defaultActiveKey={this.state.type}
                onTabChange={this.onTabChange}
                onSubmit={this.onSubmit}
-           ><div id="loginLogo">
-
-           </div>
+           >
              <Tab key="tab1" tab="账号密码登录">
                {
                  this.state.notice &&
@@ -78,7 +78,7 @@ class LoginDemo extends Component {
                <span className="icon icon-alipay" />
                <span className="icon icon-taobao" />
                <span className="icon icon-weibo" />
-               <a style={{ float: 'right' }} href="">立即注册</a>
+               <Link to={"/Register"} style={{ float: 'right'}}>立即注册</Link>
              </div>
            </Login>
          </div>

@@ -39,7 +39,6 @@ class LoginDemo extends Component {
         });
     }
     componentWillMount() {
-        console.log(1);
         const userHeight = document.body.clientHeight + "px";
         document.documentElement.style.setProperty( '--userHeight', userHeight)
     }
@@ -47,13 +46,14 @@ class LoginDemo extends Component {
     render() {
         return (
             <div id="container-login">
-
+                {/*<div id="loginLogo"/>*/}
                 <Login
                     style={{width:"400px"}}
                     defaultActiveKey={this.state.type}
                     onTabChange={this.onTabChange}
                     onSubmit={this.onSubmit}
-                ><div id="loginLogo" style={{marginTop:"-150px"}}/><div>
+                >
+                <div>
                         {
                             this.state.notice &&
                             <Alert style={{ marginBottom: 24 }} message={this.state.notice} type="error" showIcon closable />
