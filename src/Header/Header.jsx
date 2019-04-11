@@ -12,11 +12,9 @@ const {
 class Head extends Component {
 
     render() {
-
         return (
             <div>
                 <Header style={{ height:"40px", zIndex: 1, width: '100%',lineHeight: '40px',backgroundColor:"#f5f5f5"}}>
-
                     <div id="title">
                         您好，欢迎来到 <span>Octopus</span>!
                     </div>

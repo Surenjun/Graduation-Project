@@ -5,96 +5,14 @@ import "../DataMarket/css.css"
 import "./css.css"
 
 let goodId = null;
-const dataSource = [{
-    key: '1',
-    one: '北京闪送大闸蟹现货大闸蟹鲜活 螃蟹鲜活 全母螃蟹10只装顺丰包邮',
-    two: "",
-    three: 168,
-    four:168,
-    five:45,
-    six:7560,
-    seven:'https://item.taobao.com/item.htm?id=533884439102',
-    eight:96,
-    nine:540,
-    ten:89009684,
-    eleven:"北京",
-    thirteen:'龙记江苏昆山大闸蟹',
-    forteen:"北京",
-    fifteen:'2011/3/25',
-    sixteen:'北京'
-}];
-
-const columns = [{
-    title: '序号',
-    dataIndex: 'one',
-    key: 'one',
-}, {
-    title: '商品名称',
-    dataIndex: 'two',
-    key: 'two',
-}, {
-    title: '品牌名称',
-    dataIndex: 'three',
-    key: 'three',
-}, {
-    title: '价格',
-    dataIndex: 'four',
-    key: 'four',
-}, {
-    title: '商品原价',
-    dataIndex: 'five',
-    key: 'five',
-}, {
-    title: '商品销售量',
-    dataIndex: 'six',
-    key: 'six',
-}, {
-    title: '商品链接',
-    dataIndex: 'seven',
-    key: 'seven',
-}, {
-    title: '商品收藏量',
-    dataIndex: 'eight',
-    key: 'eight',
-},{
-    title: '商品库存',
-    dataIndex: 'nine',
-    key: 'nine',
-},{
-    title: '商品发货地',
-    dataIndex: 'ten',
-    key: 'ten',
-},{
-    title: '店铺名称',
-    dataIndex: 'eleven',
-    key: 'eleven',
-},{
-    title: '店铺省份',
-    dataIndex: 'thirteen',
-    key: 'thirteen',
-},{
-    title: '店铺城市',
-    dataIndex: 'forteen',
-    key: 'forteen',
-},{
-    title: '店铺开店时间',
-    dataIndex: 'fifteen',
-    key: 'fifteen',
-},{
-    title: '店铺开店年数',
-    dataIndex: 'sixteen',
-    key: 'sixteen',
-}];
 
 class DataDetail extends Component {
     componentWillMount(){
-        console.log(this.props);
         let params = new URLSearchParams(this.props.location.search);
         goodId = params.get("name");
     }
 
     render() {
-        console.log(goodId);
         return (
             <div>
                 {
