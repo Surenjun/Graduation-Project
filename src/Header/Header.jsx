@@ -2,21 +2,23 @@ import "./Header.css"
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Layout, Menu  } from "antd"
-const SubMenu = Menu.SubMenu;
 
+import {store} from "../redux/action"
+const SubMenu = Menu.SubMenu;
 const {
     Header
 } = Layout;
-
-
 class Head extends Component {
+    componentDidMount() {
+        console.log(store.getState());
+    }
 
     render() {
         return (
             <div>
                 <Header style={{ height:"40px", zIndex: 1, width: '100%',lineHeight: '40px',backgroundColor:"#f5f5f5"}}>
                     <div id="title">
-                        您好，欢迎来到 <span>Octopus</span>!
+                        {store.getState() === "您好"?"您好":<span>{store.getState()}</span>}, 欢迎来到 <span>Octopus</span>!
                     </div>
                     <Menu
                         mode="horizontal"

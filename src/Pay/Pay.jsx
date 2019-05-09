@@ -12,7 +12,6 @@ const RadioGroup = Radio.Group;
 let {goodName ,goodPrice,goodId} = ["","",""];
 class Pay extends Component {
     componentWillMount() {
-        console.log(this.props);
         goodName = this.props.location.state.goodName;
         goodPrice = this.props.location.state.goodPrice;
         goodId = this.props.location.state.goodId;

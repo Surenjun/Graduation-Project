@@ -206,12 +206,12 @@ class DataMarket extends Component {
                         </Tabs>
                         {
                             this.state.key === "1"
-                                ?<Pagination
-                                    style={{float:'right',marginRight:"30px",marginTop:"30px"}}
-                                    defaultCurrent={1}
-                                    total={this.state.data.length}
-                                    onChange={onChange.bind(this)}
-                                />:""
+                                    ?<Pagination
+                                        style={{float:'right',marginRight:"30px",marginTop:"30px"}}
+                                        defaultCurrent={1}
+                                        total={this.state.data.length}
+                                        onChange={onChange.bind(this)}
+                                    />:""
                         }
                     </Col>
 

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import "../Login/index.css"
 
 import Login from 'ant-design-pro/lib/Login';
-import { Alert} from 'antd';
-
+import {Alert, message} from 'antd';
+const  axios = require("axios");
 const { UserName, Password, Mobile, Captcha, Submit } = Login;
 
 class LoginDemo extends Component {
@@ -13,17 +13,35 @@ class LoginDemo extends Component {
         autoLogin: true,
     }
     onSubmit = (err, values) => {
-        console.log('value collected ->', { ...values, autoLogin: this.state.autoLogin });
+
         if (this.state.type === 'tab1') {
             this.setState({
                 notice: '',
             }, () => {
                 if (!err && (values.username !== '请输入账号' || values.password !== '请输入密码')) {
-                    setTimeout(() => {
-                        this.setState({
-                            notice: '',
-                        });
-                    }, 500);
+                    console.log('value collected ->', { ...values, autoLogin: this.state.autoLogin });
+                    const name =  values.username,
+                          password = values.password,
+                          phone = values.mobile;
+                    axios.post('http://surenjun.com:3131/register',{
+                        name,password,phone
+                    }).then(res =>{
+                        const data = res.data;
+                        console.log(data);
+                        if(data.sameName){
+                            message.error('该用户名已经被注册');
+                        }
+                        if(data.success){
+                            message.success('注册成功',1);
+                            setTimeout(()=>{
+                                const hide  = message.loading('页面即将跳转到主页', 0);
+                                setTimeout(()=>{
+                                    hide();
+                                    this.props.history.push('/');
+                                },2000)
+                            }, 1000);
+                        }
+                    })
                 }
             });
         }
@@ -46,7 +64,6 @@ class LoginDemo extends Component {
     render() {
         return (
             <div id="container-login">
-                {/*<div id="loginLogo"/>*/}
                 <Login
                     style={{width:"400px"}}
                     defaultActiveKey={this.state.type}
@@ -54,10 +71,6 @@ class LoginDemo extends Component {
                     onSubmit={this.onSubmit}
                 >
                 <div>
-                        {
-                            this.state.notice &&
-                            <Alert style={{ marginBottom: 24 }} message={this.state.notice} type="error" showIcon closable />
-                        }
                         <p style={{fontSize:"18px",color:"#999"}}>账号注册</p>
                         <UserName name="username" placeholder="请输入账号"/>
                         <Password name="password" placeholder="密码"/>
@@ -71,7 +84,6 @@ class LoginDemo extends Component {
                         <span className="icon icon-alipay" />
                         <span className="icon icon-taobao" />
                         <span className="icon icon-weibo" />
-
                     </div>
                 </Login>
             </div>

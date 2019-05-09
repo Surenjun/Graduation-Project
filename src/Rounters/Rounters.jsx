@@ -4,8 +4,11 @@ import { BrowserRouter as Router, Route ,Switch} from 'react-router-dom'
 import asyncComponent from '../Tools/AsyncComponent'
 
 import Main from "../Main/Main"
-import Head from "../Header/Header";
 
+import { Provider } from 'react-redux'
+import {store} from "../redux/action"
+
+import Head from "../Header/Header";
 const DataDetail = asyncComponent(() => import("../DataDetail/DataDetail"));
 const Vip = asyncComponent(() => import("../Vip/Vip"));
 const DataCustomization = asyncComponent(() => import("../DataCustomization/DataCustomization"));
@@ -17,21 +20,21 @@ const News = asyncComponent(() => import("../News/News"));
 const Register = asyncComponent(() => import("../Register/Register"));
 const DataMarket = asyncComponent(() => import("../DataMarket/DataMarket"));
 const Pay = asyncComponent(() => import("../Pay/Pay"));
-
 class Rounters extends Component {
 
     render() {
         return (
-           <Router>
+            <Provider store={store}>
+                 <Router>
                <div>
                    <Switch>
-                       <Route path="/Login" component={LoginDemo} />
-                       <Route path="/Register" component={Register} />
                        <Route path={"/Vip"} component={Vip}/>
                        <Route path={"/Pay"} component={Pay}/>
-                       <Route path="/" component={Head}/>
-                   </Switch>
 
+                           <Route path="/Login" component={LoginDemo} />
+                           <Route path="/Register" component={Register} />
+                           <Route path="/" component={Head}/>
+                   </Switch>
                    <Route path={"/Summary"} component={Summary}/>
                    <Route path={"/shopResult"} component={shopResult}/>
                    <Route path={"/News"} component={News}/>
@@ -43,6 +46,7 @@ class Rounters extends Component {
 
                </div>
            </Router>
+            </Provider>
         );
     }
 }

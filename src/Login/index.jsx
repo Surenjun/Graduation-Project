@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import "./index.css"
 
 import Login from 'ant-design-pro/lib/Login';
-import { Alert, Checkbox } from 'antd';
+import {Alert, Checkbox, message} from 'antd';
 import { Link } from 'react-router-dom'
-
+import {store ,changeName} from "../redux/action"
+import { connect } from 'react-redux'
+const  axios = require("axios");
 const { Tab, UserName, Password, Mobile, Captcha, Submit } = Login;
 
 class LoginDemo extends Component {
@@ -20,11 +22,29 @@ class LoginDemo extends Component {
         notice: '',
       }, () => {
         if (!err && (values.username !== '请输入账号' || values.password !== '请输入密码')) {
-          setTimeout(() => {
-            this.setState({
-              notice: '用户名或者密码错误',
-            });
-          }, 500);
+          const name =  values.username,
+                password = values.password;
+          axios.post('http://surenjun.com:3131/login',{
+            name ,password
+          }).then(res =>{
+            const data = res.data;
+            console.log(data);
+            if(data.success){
+              message.success('登录成功',1);
+
+              setTimeout(()=>{
+                const hide  = message.loading('即将跳转到主页', 0);
+                setTimeout(()=>{
+                  hide();
+                  this.props.dispatch(changeName(data.name))
+                  this.props.history.push('/');
+                },2000)
+              }, 1000);
+              console.log(data);
+            }else{
+              data.isReg ? message.error('用户名或者密码错误') : message.error('用户名不存在');
+            }
+          })
         }
       });
     }
@@ -85,5 +105,5 @@ class LoginDemo extends Component {
     );
   }
 }
-
+LoginDemo = connect()(LoginDemo)
 export default LoginDemo

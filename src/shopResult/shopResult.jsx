@@ -6,7 +6,6 @@ const  axios = require("axios");
 const Search = Input.Search;
 const Option = Select.Option;
 
-
 class shopResult extends Component {
     state = {
         value:null,
@@ -59,7 +58,6 @@ class shopResult extends Component {
         this.getData(this.state.value, current ,this.state.pageSize)
     };
     render() {
-
         const columns = [{
             title: '序号',
             dataIndex: 'key',
