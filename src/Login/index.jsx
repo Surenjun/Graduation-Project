@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./index.css"
 
 import Login from 'ant-design-pro/lib/Login';
-import {Alert, Checkbox, message} from 'antd';
+import {Alert, Checkbox, message ,Icon} from 'antd';
 import { Link } from 'react-router-dom'
 import {store ,changeName} from "../redux/action"
 import { connect } from 'react-redux'
@@ -38,7 +38,7 @@ class LoginDemo extends Component {
                   hide();
                   this.props.dispatch(changeName(data.name))
                   this.props.history.push('/');
-                },2000)
+                },1000)
               }, 1000);
               console.log(data);
             }else{
@@ -90,14 +90,16 @@ class LoginDemo extends Component {
              </Tab>
              <div>
                <Checkbox checked={this.state.autoLogin} onChange={this.changeAutoLogin}>记住密码</Checkbox>
-               <a style={{ float: 'right' }} href="#">忘记密码?</a>
+               <a style={{ float: 'right' }} href="/ForgetUser">忘记密码?</a>
              </div>
              <Submit>登录</Submit>
              <div>
                其他登录方式
-               <span className="icon icon-alipay" />
-               <span className="icon icon-taobao" />
-               <span className="icon icon-weibo" />
+               <span id="icon">
+                 <Icon type="alipay-circle" id="alipay"/>
+                 <Icon type="weibo-circle" id="weibo"/>
+                 <Icon type="wechat" id="wechat"/>
+               </span>
                <Link to={"/Register"} style={{ float: 'right'}}>立即注册</Link>
              </div>
            </Login>

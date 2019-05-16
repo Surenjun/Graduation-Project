@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import "./css.css"
 import "../Header/Header.css"
-import { Layout, Menu ,Tabs ,Row, Col} from "antd"
-import { Link } from 'react-router-dom'
-const SubMenu = Menu.SubMenu;
+import { Layout ,Tabs ,Row, Col} from "antd"
+import {store} from  "../redux/action"
 const TabPane = Tabs.TabPane;
 const {
-    Header
+
 } = Layout;
 
 class Vip extends Component {
@@ -14,35 +13,6 @@ class Vip extends Component {
     render() {
         return (
             <div>
-                <Header style={{ height:"40px", zIndex: 1, width: '100%',lineHeight: '40px',backgroundColor:"#f5f5f5"}}>
-
-                    <div id="title">
-                        您好，欢迎来到 <span><Link to={"/"}>Octopus</Link></span>!
-                    </div>
-                    <Menu
-                        mode="horizontal"
-                        style={{ lineHeight: '40px' ,backgroundColor:"#f5f5f5"}}
-                    >
-                        <Menu.Item key="1">
-                            <Link to={"/Login"}>登录</Link>
-                        </Menu.Item>
-                        <Menu.Item key="2">
-                            <Link to={"/Register"}>注册</Link>
-                        </Menu.Item>
-                        <SubMenu style={{float:'right'}} title={<span className="submenu-title-wrapper">
-                            消息</span>}>
-                            <Menu.Item key="setting:1">站内消息</Menu.Item>
-                            <Menu.Item key="setting:2">系统消息</Menu.Item>
-                        </SubMenu>
-                        <SubMenu style={{float:'right'}} title={<span className="submenu-title-wrapper">
-                            个人中心</span>}>
-                            <Menu.Item key="setting:3"><Link to={"/Vip"}>会员功能</Link></Menu.Item>
-                            <Menu.Item key="setting:4"><Link to={"/Record"}>购买记录</Link></Menu.Item>
-                            <Menu.Item key="setting:5"><Link to={"/Person"}>个人设置</Link></Menu.Item>
-                        </SubMenu>
-                    </Menu>
-
-                </Header>
                 <div className="c-person-header" id="c_maijia_uc_header">
                     <Row type="flex" justify="center">
                         <Col span={17}>
@@ -63,7 +33,8 @@ class Vip extends Component {
                             <Tabs type="card">
                                 <TabPane tab="会员功能" key="1">
                                     <div className="smy">
-                                        hi~ zzzzzsss，您已开启<span className="l">3</span>项会员功能，高于<span
+                                        hi~ <span className="l">{store.getState()}</span>，
+                                    您已开启<span className="l">3</span>项会员功能，高于<span
                                         className="l">45.3%</span>的用户
                                     </div>
                                     <Row type="flex" justify="center" className="meal-info">

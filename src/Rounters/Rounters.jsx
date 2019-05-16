@@ -20,6 +20,7 @@ const News = asyncComponent(() => import("../News/News"));
 const Register = asyncComponent(() => import("../Register/Register"));
 const DataMarket = asyncComponent(() => import("../DataMarket/DataMarket"));
 const Pay = asyncComponent(() => import("../Pay/Pay"));
+const ForgetUser = asyncComponent(() => import("../ForgetUser/ForgetUser"));
 class Rounters extends Component {
 
     render() {
@@ -30,9 +31,9 @@ class Rounters extends Component {
                    <Switch>
                        <Route path={"/Vip"} component={Vip}/>
                        <Route path={"/Pay"} component={Pay}/>
-
                            <Route path="/Login" component={LoginDemo} />
                            <Route path="/Register" component={Register} />
+                            <Route path="/ForgetUser" component={ForgetUser}/>
                            <Route path="/" component={Head}/>
                    </Switch>
                    <Route path={"/Summary"} component={Summary}/>

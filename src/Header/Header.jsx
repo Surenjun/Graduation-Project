@@ -1,7 +1,7 @@
 import "./Header.css"
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Layout, Menu  } from "antd"
+import {Layout, Menu, message} from "antd"
 
 import {store} from "../redux/action"
 const SubMenu = Menu.SubMenu;
@@ -9,10 +9,16 @@ const {
     Header
 } = Layout;
 class Head extends Component {
-    componentDidMount() {
-        console.log(store.getState());
+    state = {
+        name :store.getState()
     }
-
+    changeToVip(){
+        if(this.state.name === "您好"){
+            message.warning('请先登录账号',1);
+        }else{
+            this.props.history.push('/Vip');
+        }
+    }
     render() {
         return (
             <div>
@@ -24,12 +30,18 @@ class Head extends Component {
                         mode="horizontal"
                         style={{ lineHeight: '40px' ,backgroundColor:"#f5f5f5"}}
                     >
-                        <Menu.Item key="1">
-                            <Link to={"/Login"}>登录</Link>
-                        </Menu.Item>
-                        <Menu.Item key="2">
-                            <Link to={"/Register"}>注册</Link>
-                        </Menu.Item>
+                        {
+                            store.getState() === "您好" &&
+                                <Menu.Item key="1">
+                                    <Link to={"/Login"}>登录</Link>
+                                </Menu.Item>
+                        }
+                        {
+                            store.getState() === "您好" &&
+                                <Menu.Item key="2">
+                                    <Link to={"/Register"}>注册</Link>
+                                </Menu.Item>
+                        }
                         <SubMenu style={{float:'right'}} title={<span className="submenu-title-wrapper">
                             消息</span>}>
                             <Menu.Item key="setting:1">站内消息</Menu.Item>
@@ -37,9 +49,9 @@ class Head extends Component {
                         </SubMenu>
                         <SubMenu style={{float:'right'}} title={<span className="submenu-title-wrapper">
                             个人中心</span>}>
-                            <Menu.Item key="setting:3"><Link to={"/Vip"}>会员功能</Link></Menu.Item>
-                            <Menu.Item key="setting:4"><Link to={"/Record"}>购买记录</Link></Menu.Item>
-                            <Menu.Item key="setting:5"><Link to={"/Person"}>个人设置</Link></Menu.Item>
+                            <Menu.Item key="setting:3" onClick={()=>this.changeToVip()}>会员功能</Menu.Item>
+                            <Menu.Item key="setting:4">购买记录</Menu.Item>
+                            <Menu.Item key="setting:5">个人设置</Menu.Item>
                         </SubMenu>
                     </Menu>
 

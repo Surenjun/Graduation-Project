@@ -55,3 +55,16 @@
 #scaffold-src-components-Login-demo-basic .icon-weibo:hover {
     background-position: 0 -48px;
 }
+#icon i{
+    font-size: 25px;
+    color: #CCCCCC;
+    padding-right: 12px;
+    margin-top: 5px;
+}
+#icon i:hover{
+    cursor: pointer;
+    color: #1890ff;
+}
+i#alipay{
+    padding-left: 12px;
+}

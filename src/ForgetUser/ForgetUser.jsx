@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import "../Login/index.css"
 
 import Login from 'ant-design-pro/lib/Login';
-import {Alert, Icon, message} from 'antd';
+import {Alert, message} from 'antd';
+import {changeName} from "../redux/action";
 const  axios = require("axios");
 const { UserName, Password, Mobile, Captcha, Submit } = Login;
 
@@ -21,25 +22,28 @@ class LoginDemo extends Component {
                 if (!err && (values.username !== '请输入账号' || values.password !== '请输入密码')) {
                     console.log('value collected ->', { ...values, autoLogin: this.state.autoLogin });
                     const name =  values.username,
-                          password = values.password,
-                          phone = values.mobile;
-                    axios.post('http://surenjun.com:3131/register',{
-                        name,password,phone
+                        password = values.password,
+                        newPassword = values.password2,
+                        phone = values.mobile;
+                    axios.post('http://surenjun.com:3131/forget',{
+                        name,password,newPassword
                     }).then(res =>{
                         const data = res.data;
-                        console.log(data);
-                        if(data.sameName){
-                            message.error('该用户名已经被注册');
-                        }
                         if(data.success){
-                            message.success('注册成功',1);
+                            message.success('密码修改成功',1);
                             setTimeout(()=>{
-                                const hide  = message.loading('页面即将跳转到主页', 0);
+                                const hide  = message.loading('即将跳转到登录页面', 0);
                                 setTimeout(()=>{
                                     hide();
-                                    this.props.history.push('/');
+                                    this.props.history.push('/Login');
                                 },1000)
                             }, 1000);
+                        }else{
+                            if(data.isReg){
+                                message.error('原密码输入不正确！');
+                            }else{
+                                message.error('用户名不存在！');
+                            }
                         }
                     })
                 }
@@ -60,6 +64,7 @@ class LoginDemo extends Component {
         const userHeight = document.body.clientHeight + "px";
         document.documentElement.style.setProperty( '--userHeight', userHeight)
     }
+
     render() {
         return (
             <div id="container-login">
@@ -69,23 +74,16 @@ class LoginDemo extends Component {
                     onTabChange={this.onTabChange}
                     onSubmit={this.onSubmit}
                 >
-                <div>
-                        <p style={{fontSize:"18px",color:"#999"}}>账号注册</p>
+                    <div>
+                        <p style={{fontSize:"18px",color:"#999"}}>修改账号</p>
                         <UserName name="username" placeholder="请输入账号"/>
-                        <Password name="password" placeholder="密码"/>
-                        <Password name="password1" placeholder="确认密码"/>
+                        <Password name="password" placeholder="原密码"/>
+                        <Password name="password1" placeholder="新密码"/>
+                        <Password name="password2" placeholder="确认新密码"/>
                         <Mobile name="mobile" placeholder="请输入手机号"/>
                         <Captcha placeholder="验证码" onGetCaptcha={() => console.log('Get captcha!')} name="验证码" />
-                </div>
-                    <Submit>注册</Submit>
-                    <div>
-                        其他注册方式
-                        <span id="icon">
-                             <Icon type="alipay-circle" id="alipay"/>
-                             <Icon type="weibo-circle" id="weibo"/>
-                             <Icon type="wechat" id="wechat"/>
-                         </span>
                     </div>
+                    <Submit>确认修改</Submit>
                 </Login>
             </div>
         );
