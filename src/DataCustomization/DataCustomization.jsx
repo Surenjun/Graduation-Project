@@ -1,6 +1,45 @@
 import React, {Component} from 'react';
 import "./css.css"
+import {message} from "antd";
+const  axios = require("axios");
 class DataCustomization extends Component {
+    state = {
+        name:"",
+        phone:"",
+        content:""
+    }
+    handleChangeName(e){
+        this.setState({
+            name : e.target.value
+        })
+    }
+    handleChangePhone(e){
+        this.setState({
+            phone : e.target.value
+        })
+    }
+    handleChangeContent(e){
+        this.setState({
+            content : e.target.value
+        })
+    }
+    onsubmit(){
+        const {name , phone ,content} = this.state;
+
+        axios.post('http://surenjun.com:3131/addRequest',{
+            name ,phone ,content
+        }).then(res =>{
+            const data = res.data;
+            if(data.success){
+                message.success("提交成功", 1 )
+                this.setState({
+                    name:"",
+                    phone:"",
+                    content:""
+                })
+            }
+        })
+    }
     render() {
         return (
             <div>
@@ -186,14 +225,16 @@ class DataCustomization extends Component {
                                 </ul>
                             </div>
                             <div className="feedback">
-                                <input type="text" className="J_user J_user_name" placeholder="姓名"/>
-                                <input type="text" className="J_user J_user_phone" placeholder="手机" style={{marginLeft: '40px'}}/>
+                                <input type="text" value={this.state.name} onChange={this.handleChangeName.bind(this)} className="J_user J_user_name" placeholder="姓名"/>
+                                <input type="text" value={this.state.phone} onChange={this.handleChangePhone.bind(this)} className="J_user J_user_phone" placeholder="手机" style={{marginLeft: '40px'}}/>
                                 <div className="J_message_phone"/>
                                 <div className="J_message_name"/>
                                 <textarea className="J_user J_user_content"
+                                          value={this.state.content}
+                                          onChange={this.handleChangeContent.bind(this)}
                                           placeholder="1分钟填写数据的需求，开启专属数据定制服务"
                                           id="" cols="30" rows="10"/>
-                                <div className="btn J_submit">提交需求
+                                <div className="btn J_submit" onClick={this.onsubmit.bind(this)}>提交需求
                                     <div className="J_message_con"/>
                                 </div>
                             </div>

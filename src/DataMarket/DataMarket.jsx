@@ -3,6 +3,14 @@ import {Spin, Tabs} from 'antd';
 import { Row, Col ,Pagination} from 'antd';
 import { Link} from 'react-router-dom'
 import "./css.css"
+
+import one from "../img/right_bar_supdemand_icon1.png"
+import two from "../img/right_bar_supdemand_icon2.png"
+import three from "../img/right_bar_supdemand_icon3.png"
+import four from "../img/right_bar_3.png"
+import five from "../img/right_bar_twe_bg.png"
+import six from "../img/right_bar_4.png"
+
 const  axios = require("axios");
 const TabPane = Tabs.TabPane;
 
@@ -227,15 +235,15 @@ class DataMarket extends Component {
                                 <Col span={24}>
                                     <div className="down_icon_list">
                                         <div className="down_icon">
-                                            <img src="https://www.tdata.cn/Public/images/common/right_bar_supdemand_icon1.png"/>
+                                            <img src={one}/>
                                                 <p>快速响应</p>
                                         </div>
                                         <div className="down_icon">
-                                            <img src="https://www.tdata.cn/Public/images/common/right_bar_supdemand_icon2.png"/>
+                                            <img src={two}/>
                                                 <p>全程保障</p>
                                         </div>
                                         <div className="down_icon">
-                                            <img src="https://www.tdata.cn/Public/images/common/right_bar_supdemand_icon3.png"/>
+                                            <img src={three}/>
                                                 <p>委托撮合</p>
                                         </div>
                                     </div>
@@ -245,7 +253,7 @@ class DataMarket extends Component {
                         <Row>
                             <Col span={24} >
                                 <div className="int_right_bar">
-                                    <h4><img src="https://www.tdata.cn/Public/images/int/right_bar_3.png"/>最新供需
+                                    <h4><img src={four}/>最新供需
                                         <a href="#">更多</a></h4>
                                     <ul style={{padding:0}}>
                                         <li><a href="#"><span>1</span>深圳市公司核名数据</a></li>
@@ -266,7 +274,7 @@ class DataMarket extends Component {
                         </Row>
                         <Row>
                             <div className="int_right_bar">
-                                <h4><img src="https://www.tdata.cn/Public/images/int/right_bar_4.png"/>热销数据</h4>
+                                <h4><img src={six}/>热销数据</h4>
                                 <ul style={{padding:0}}>
                                     <li><a href="#"><span>1</span>商品零售数据查询</a></li>
                                     <li><a href="#"><span>2</span>济南市2017年第二季度电商数据分析报告</a>
