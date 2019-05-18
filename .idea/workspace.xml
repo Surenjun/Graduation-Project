@@ -8,6 +8,7 @@
       <change afterPath="$PROJECT_DIR$/src/img/right_bar_supdemand_icon2.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/img/right_bar_supdemand_icon3.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/img/right_bar_twe_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataCustomization/DataCustomization.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataCustomization/DataCustomization.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataCustomization/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataCustomization/css.css" afterDir="false" />
@@ -25,14 +26,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataCustomization/DataCustomization.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="348">
-              <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -113,7 +132,6 @@
         <option value="$PROJECT_DIR$/src/Tools/AsyncHighChart.js" />
         <option value="$PROJECT_DIR$/node_modules/react-scripts/config/webpack.config.js" />
         <option value="$PROJECT_DIR$/../nginx.conf" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/build/static/css/8.590a14f1.chunk.css" />
         <option value="$PROJECT_DIR$/build/static/css/12.37b912d8.chunk.css" />
         <option value="$PROJECT_DIR$/1.html" />
@@ -141,6 +159,7 @@
         <option value="$PROJECT_DIR$/src/DataMarket/css.css" />
         <option value="$PROJECT_DIR$/src/DataCustomization/css.css" />
         <option value="$PROJECT_DIR$/src/DataCustomization/DataCustomization.jsx" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -265,12 +284,12 @@
       <workItem from="1557466725505" duration="692000" />
       <workItem from="1557575384306" duration="54000" />
       <workItem from="1558007431710" duration="1048000" />
-      <workItem from="1558180157613" duration="3449000" />
+      <workItem from="1558180157613" duration="3695000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189878000" />
+    <option name="totallyTimeSpent" value="190124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -288,7 +307,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.94880545" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.79010236" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32935154" />
       <window_info anchor="bottom" id="Quokka" order="11" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
@@ -325,7 +344,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build/static/css/2.582a0bc3.chunk.css" />
     <entry file="file://$PROJECT_DIR$/build/static/css/9.b2eaf72a.chunk.css" />
     <entry file="file://$PROJECT_DIR$/build/static/css/10.452fd3e2.chunk.css" />
     <entry file="file://$PROJECT_DIR$/build/static/css/11.8aad2f84.chunk.css" />
@@ -419,13 +437,6 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -633,10 +644,24 @@
     <entry file="file://$PROJECT_DIR$/src/DataCustomization/DataCustomization.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
-          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
