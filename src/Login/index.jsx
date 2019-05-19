@@ -96,9 +96,9 @@ class LoginDemo extends Component {
              <div>
                其他登录方式
                <span id="icon">
-                 <Icon type="alipay-circle" id="alipay"/>
-                 <Icon type="weibo-circle" id="weibo"/>
-                 <Icon type="wechat" id="wechat"/>
+                 <Icon type="alipay" id="alipay"/>
+                 <Icon type="weibo" />
+                 <Icon type="wechat" />
                </span>
                <Link to={"/Register"} style={{ float: 'right'}}>立即注册</Link>
              </div>

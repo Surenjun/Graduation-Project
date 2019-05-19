@@ -6,7 +6,9 @@ import { Checkbox ,Button , Radio ,message} from 'antd';
 
 import alipay from "../img/alipay.png"
 import union from "../img/union.png"
-
+import wechat from "../img/wechat.jpg"
+import {store} from "../redux/action"
+const  axios = require("axios");
 const RadioGroup = Radio.Group;
 
 let {goodName ,goodPrice,goodId} = ["","",""];
@@ -19,18 +21,53 @@ class Pay extends Component {
 
     state = {
         num : 0,
-        ifNotice:false
+        ifNotice:false,
+        radioState : 0,
+        Number : "201905" +new Date().getDate()+new Date().getHours() + "" + new Date().getMinutes() + new Date().getSeconds()
     };
     changeNum(){
         if(this.state.ifNotice){
-            this.setState({num:1})
+
+            //增加订单
+            const orderName = this.state.Number,
+                  orderUser = store.getState(),
+                  orderPrice = goodPrice,
+                  orderStatus = 0;
+            axios.post('http://surenjun.com:3131/addOrder',{
+                orderName,orderUser,orderPrice,orderStatus
+            }).then(res =>{
+                const data = res.data;
+                if(data.success){
+                    message.success('订单创建成功');
+                    this.setState({num:1});
+                }
+            })
         }else{
             message.warning('请阅读购买协议');
         }
     }
+    onChangeRadio(){
+        this.setState({radioState:1})
+    }
     sendPay(){
-        const hide = message.loading('正在支付..', 0);
-        setTimeout(hide, 2500);
+        if(this.state.radioState){
+            const that = this;
+            const hide = message.loading('正在支付..', 0);
+            const orderName = this.state.Number,
+                 orderStatus = 1;
+            axios.post('http://surenjun.com:3131/payOrder',{
+                orderName,orderStatus
+            }).then(res =>{
+                const data = res.data;
+                if(data.success){
+                    hide();
+                    message.success('支付成功');
+                    that.setState({num:2});
+                }
+            })
+        }else{
+            message.warning('请选择支付方式');
+        }
     }
     onChange(e) {
         const bool = e.target.checked;
@@ -69,7 +106,7 @@ class Pay extends Component {
                                        <tr>
                                            <td>{goodName}</td>
                                            <td>1个月</td>
-                                           <td></td>
+                                           <td>按月</td>
                                            <td>1</td>
                                            <td>￥{goodPrice}</td>
                                        </tr>
@@ -98,17 +135,21 @@ class Pay extends Component {
                             <div className="dingdan_wk">
                                 <h2 className="content_title">订单提交成功</h2>
                                 <p className="dingdan_zfxx">
-                                    <b>订单号:</b><em>2019031897984850</em>
-                                    <b>订单总价：</b><em>￥199.00</em></p>
+                                    <b>订单号:</b><em>{this.state.Number}</em>
+                                    <b>订单总价：</b><em>￥199.00</em>
+                                </p>
                                 <h2 className="content_title">订单支付</h2>
                                 <div className="dingdan_wyzf">
                                     <h5>选择支付方式</h5>
                                     <div>
-                                        <RadioGroup>
+                                        <RadioGroup onChange={this.onChangeRadio.bind(this)}>
                                             <Radio value={1}>
                                                 <img src={alipay} alt=""/>
                                             </Radio>
                                             <Radio value={2}>
+                                                <img style={{width:"110px"}} src={wechat} alt=""/>
+                                            </Radio>
+                                            <Radio value={3}>
                                                 <img src={union} alt=""/>
                                             </Radio>
                                         </RadioGroup>

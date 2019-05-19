@@ -1,17 +1,28 @@
 import React, {Component} from 'react';
-import { Row, Col ,Button} from 'antd';
+import {Row, Col, Button, message} from 'antd';
 import {Link} from "react-router-dom"
 import "../DataMarket/css.css"
 import "./css.css"
+import {store} from "../redux/action";
 
 let goodId = null;
 
 class DataDetail extends Component {
+    state = {
+        name :store.getState()
+    }
     componentWillMount(){
         let params = new URLSearchParams(this.props.location.search);
         goodId = params.get("name");
     }
-
+    changeToPay(){
+        console.log(1);
+        if(this.state.name === "您好"){
+            message.warning('请先登录账号',1);
+        }else{
+            this.props.history.push('/Pay');
+        }
+    }
     render() {
         return (
             <div>
@@ -67,7 +78,7 @@ class DataDetail extends Component {
                                                 <Row>
                                                     <Col span={4} offset={19}>
                                                         <Button type="primary" size={"large"}>
-                                                            <Link to={{ pathname:'/Pay',
+                                                            <Link onClick={this.changeToPay.bind(this)} to={{
                                                                 state:{
                                                                     goodId:"5c98327021eb0d25285b295d",
                                                                     goodName:"商品零售数据查询",
@@ -310,7 +321,7 @@ class DataDetail extends Component {
                                                 <Row>
                                                     <Col span={4} offset={19}>
                                                         <Button type="primary" size={"large"}>
-                                                            <Link to={{ pathname:'/Pay',
+                                                            <Link onClick={this.changeToPay.bind(this)} to={{
                                                                         state:{
                                                                             goodId:"5c9832ac21eb0d25285b295e",
                                                                             goodName:"2018年天猫双11懒人产品分析报告",
@@ -513,7 +524,7 @@ class DataDetail extends Component {
                                                 <Row>
                                                     <Col span={4} offset={19}>
                                                         <Button type="primary" size={"large"}>
-                                                            <Link to={{ pathname:'/Pay',
+                                                            <Link onClick={this.changeToPay.bind(this)}  to={{
                                                                 state:{
                                                                     goodId:"5c98330d21eb0d25285b2960",
                                                                     goodName:"2018年9月电商大闸蟹销售数据",
