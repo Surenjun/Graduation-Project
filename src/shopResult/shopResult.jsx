@@ -35,10 +35,18 @@ class shopResult extends Component {
             const pagination = { ..._this.state.pagination };
             pagination.total = count;
             const data = response.data.result.data;
-            console.log(data);
             data.forEach((item,key) =>{
                 item.image =  <img style={{width:"50px"}} src={item.item_image}/>;
-                item.shop_title =  <span style={{color: '#1890ff'}}>{item.shop_title}</span>;
+                item.item_title = item.item_title.replace(value);
+                const strArr = item.item_title.split("undefined");
+                item.item_title =
+                    <span style={{color: 'rgba(0, 0, 0, 0.65)'}}>
+                        {strArr[0]}
+                        <span style={{color: 'red'}}>{value}</span>
+                        {strArr[1]}
+                    </span>;
+                item.shop_title =  <span style={{color: '#1890ff'}}>{item.shop_title} </span>;
+                console.log(item.shop_title);
                 item.key = (current - 1 ) * pageSize + key + 1;
                 item._price = item.price;
                 item.price = <span style={{color: 'red'}}>￥{item.price}</span>

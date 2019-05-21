@@ -36,7 +36,7 @@ class LoginDemo extends Component {
                 const hide  = message.loading('即将跳转到主页', 0);
                 setTimeout(()=>{
                   hide();
-                  this.props.dispatch(changeName(data.name))
+                  sessionStorage.setItem('userName',data.name);
                   this.props.history.push('/');
                 },1000)
               }, 1000);

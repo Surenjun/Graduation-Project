@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
 import "./css.css"
 import "../Header/Header.css"
-import { Layout ,Tabs ,Row, Col} from "antd"
+import { Tabs ,Row, Col} from "antd"
 import {store} from  "../redux/action"
 const TabPane = Tabs.TabPane;
-const {
-
-} = Layout;
 
 class Vip extends Component {
 
@@ -33,7 +30,7 @@ class Vip extends Component {
                             <Tabs type="card">
                                 <TabPane tab="会员功能" key="1">
                                     <div className="smy">
-                                        hi~ <span className="l">{store.getState()}</span>，
+                                        hi~ <span className="l">{sessionStorage.getItem('userName')}</span>，
                                     您已开启<span className="l">3</span>项会员功能，高于<span
                                         className="l">45.3%</span>的用户
                                     </div>
@@ -76,24 +73,6 @@ class Vip extends Component {
                                         </Col>
                                     </Row>
 
-                                    <Row  className="meal-info">
-                                        <Col span={4} style={{textAlign: 'center',marginTop:"50px"}}>
-                                            <img src="//cdn.maijia.com/www-activity/pages/user/vip/img/xy-c.png" alt=""/>
-                                            <h3>卖家学院线下会员</h3>
-                                            <h4>有效期：未定购</h4>
-                                            <div className="btn">立即购买</div>
-                                        </Col>
-                                    </Row>
-
-                                </TabPane>
-                                <TabPane tab="卖家学院" key="2">
-                                    卖家学院
-                                </TabPane>
-                                <TabPane tab="我报名的课程" key="3">
-                                    我报名的课程
-                                </TabPane>
-                                <TabPane tab="卖家资讯" key="4">
-                                    卖家资讯
                                 </TabPane>
                                 <TabPane tab="收藏管理" key="5">
                                     收藏管理

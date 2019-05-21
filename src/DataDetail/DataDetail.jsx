@@ -9,7 +9,7 @@ let goodId = null;
 
 class DataDetail extends Component {
     state = {
-        name :store.getState()
+        name :sessionStorage.getItem("userName")
     }
     componentWillMount(){
         let params = new URLSearchParams(this.props.location.search);
@@ -17,7 +17,7 @@ class DataDetail extends Component {
     }
     changeToPay(){
         console.log(1);
-        if(this.state.name === "您好"){
+        if(this.state.name === null){
             message.warning('请先登录账号',1);
         }else{
             this.props.history.push('/Pay');

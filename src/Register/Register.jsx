@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import "../Login/index.css"
 
 import Login from 'ant-design-pro/lib/Login';
-import {Alert, Icon, message} from 'antd';
+import {Icon, message} from 'antd';
+import {connect} from "react-redux";
 const  axios = require("axios");
 const { UserName, Password, Mobile, Captcha, Submit } = Login;
 
@@ -19,7 +20,6 @@ class LoginDemo extends Component {
                 notice: '',
             }, () => {
                 if (!err && (values.username !== '请输入账号' || values.password !== '请输入密码')) {
-                    console.log('value collected ->', { ...values, autoLogin: this.state.autoLogin });
                     const name =  values.username,
                           password = values.password,
                           phone = values.mobile;
@@ -27,7 +27,6 @@ class LoginDemo extends Component {
                         name,password,phone
                     }).then(res =>{
                         const data = res.data;
-                        console.log(data);
                         if(data.sameName){
                             message.error('该用户名已经被注册');
                         }
@@ -37,6 +36,7 @@ class LoginDemo extends Component {
                                 const hide  = message.loading('页面即将跳转到主页', 0);
                                 setTimeout(()=>{
                                     hide();
+                                    sessionStorage.setItem('userName',data.name);
                                     this.props.history.push('/');
                                 },1000)
                             }, 1000);
@@ -91,5 +91,5 @@ class LoginDemo extends Component {
         );
     }
 }
-
+LoginDemo = connect()(LoginDemo)
 export default LoginDemo

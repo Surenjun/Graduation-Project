@@ -11,20 +11,43 @@ import {store} from "../redux/action"
 const  axios = require("axios");
 const RadioGroup = Radio.Group;
 
-let {goodName ,goodPrice,goodId} = ["","",""];
+let {goodName ,goodPrice,goodId ,orderToPay ,orderName} = ["","",""];
 class Pay extends Component {
     componentWillMount() {
+        orderToPay = this.props.location.state.orderToPay;
+        orderName = this.props.location.state.orderName;
         goodName = this.props.location.state.goodName;
         goodPrice = this.props.location.state.goodPrice;
         goodId = this.props.location.state.goodId;
+        if(orderToPay){
+            this.setState({
+                num:1,
+                Number:orderName
+            });
+        }
     }
-
     state = {
         num : 0,
         ifNotice:false,
         radioState : 0,
         Number : "201905" +new Date().getDate()+new Date().getHours() + "" + new Date().getMinutes() + new Date().getSeconds()
     };
+    Format = function (fmt ,time) {
+        const o = {
+            "M+": time.getMonth() + 1, // 月份
+            "d+": time.getDate(), // 日
+            "h+": time.getHours(), // 小时
+            "m+": time.getMinutes(), // 分
+            "s+": time.getSeconds(), // 秒
+            "q+": Math.floor((time.getMonth() + 3) / 3), // 季度
+            "S": time.getMilliseconds() // 毫秒
+        };
+        if (/(y+)/.test(fmt))
+            fmt = fmt.replace(RegExp.$1, (time.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (let k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
     changeNum(){
         if(this.state.ifNotice){
 
@@ -32,9 +55,10 @@ class Pay extends Component {
             const orderName = this.state.Number,
                   orderUser = store.getState(),
                   orderPrice = goodPrice,
-                  orderStatus = 0;
+                  orderStatus = 0,
+                  orderTime = this.Format("yyyy-MM-dd hh:mm:ss" ,new Date());
             axios.post('http://surenjun.com:3131/addOrder',{
-                orderName,orderUser,orderPrice,orderStatus
+                orderName,orderUser,goodName,goodId,orderPrice,orderStatus,orderTime
             }).then(res =>{
                 const data = res.data;
                 if(data.success){

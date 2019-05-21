@@ -10,13 +10,20 @@ const {
 } = Layout;
 class Head extends Component {
     state = {
-        name :store.getState()
+        name : sessionStorage.getItem('userName')
     }
     changeToVip(){
-        if(this.state.name === "您好"){
+        if(this.state.name === null){
             message.warning('请先登录账号',1);
         }else{
             this.props.history.push('/Vip');
+        }
+    }
+    changeToOrder(){
+        if(this.state.name === null){
+            message.warning('请先登录账号',1);
+        }else{
+            this.props.history.push('/Order');
         }
     }
     render() {
@@ -24,20 +31,20 @@ class Head extends Component {
             <div>
                 <Header style={{ height:"40px", zIndex: 1, width: '100%',lineHeight: '40px',backgroundColor:"#f5f5f5"}}>
                     <div id="title">
-                        {store.getState() === "您好"?"您好":<span>{store.getState()}</span>}, 欢迎来到 <span>Octopus</span>!
+                        {sessionStorage.getItem('userName') === null?"您好":<span>{sessionStorage.getItem('userName')}</span>}, 欢迎来到 <span>Octopus</span>!
                     </div>
                     <Menu
                         mode="horizontal"
                         style={{ lineHeight: '40px' ,backgroundColor:"#f5f5f5"}}
                     >
                         {
-                            store.getState() === "您好" &&
+                            sessionStorage.getItem('userName')  === null &&
                                 <Menu.Item key="1">
                                     <Link to={"/Login"}>登录</Link>
                                 </Menu.Item>
                         }
                         {
-                            store.getState() === "您好" &&
+                            sessionStorage.getItem('userName')  === null &&
                                 <Menu.Item key="2">
                                     <Link to={"/Register"}>注册</Link>
                                 </Menu.Item>
@@ -50,7 +57,7 @@ class Head extends Component {
                         <SubMenu style={{float:'right'}} title={<span className="submenu-title-wrapper">
                             个人中心</span>}>
                             <Menu.Item key="setting:3" onClick={()=>this.changeToVip()}>会员功能</Menu.Item>
-                            <Menu.Item key="setting:4">购买记录</Menu.Item>
+                            <Menu.Item key="setting:4" onClick={()=>this.changeToOrder()}>订单记录</Menu.Item>
                             <Menu.Item key="setting:5">个人设置</Menu.Item>
                         </SubMenu>
                     </Menu>

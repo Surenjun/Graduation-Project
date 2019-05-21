@@ -2,28 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f8a7ff6-ce97-400e-9952-d025fac7954c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/img/wechat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/wechat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Order/Order.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Order/css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/10.b55d2b9f.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/11.71d0bb2c.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/12.8829ac89.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/13.0b33f1bb.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/14.2cad1bf1.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/15.62929b7c.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/16.fcabda0b.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/17.fcabda0b.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/18.f59eb06c.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/19.fcabda0b.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/2.2f2c0bbe.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/20.a185115d.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/8.80d637cd.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/9.0bd44884.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.77dfabb8.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.8decc269e4dbcbac5fcf2d426e4eb296.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/10.b55d2b9f.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/11.71d0bb2c.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/12.8829ac89.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/13.0b33f1bb.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/14.2cad1bf1.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/15.62929b7c.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/16.fcabda0b.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/17.fcabda0b.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/18.f59eb06c.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/19.fcabda0b.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/2.2f2c0bbe.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/20.a185115d.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/0.2e00f020.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/1.4cc35e3e.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/10.8e9c01e6.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/11.1e3416b8.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/12.95faa4ac.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/13.76e3c7fd.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/14.95d147f4.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/15.424c9c12.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/16.a9a88c42.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/17.2fbe420c.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/18.2deafd15.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/19.69976aac.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.957776fc.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/20.c5025bda.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/21.59eca055.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/22.834503b8.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/23.217e1ac6.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/3.ddce977e.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/4.5d38c450.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/5.919f15b6.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/8.fbf7610e.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/9.9b7a9ad2.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.5605d048.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/runtime~main.85eaec58.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataDetail/DataDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataDetail/DataDetail.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataMarket/DataMarket.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataMarket/DataMarket.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pay/Pay.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/Pay.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pay/Step.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/Step.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Register/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Register/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rounters/Rounters.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rounters/Rounters.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vip/Vip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vip/Vip.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shopResult/shopResult.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shopResult/shopResult.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,13 +66,40 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="mytest" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Rounters/Rounters.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="37" column="70" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="70" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Login/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="38" column="63" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Header/Header.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1520">
-              <caret line="13" column="5" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
+            <state relative-caret-position="281">
+              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -49,22 +108,73 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Login/index.css">
+        <entry file="file://$PROJECT_DIR$/src/DataDetail/DataDetail.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="76" column="22" lean-forward="true" selection-start-line="76" selection-start-column="22" selection-end-line="77" selection-end-column="1" />
+            <state relative-caret-position="145">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Login/index.jsx">
+        <entry file="file://$PROJECT_DIR$/src/Register/Register.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="100" column="39" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="39" />
+            <state relative-caret-position="-667">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Pay/Pay.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2320">
+              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Pay/Step.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vip/Vip.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/action.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -97,6 +207,9 @@
       <find>.taosj-content6 .content .feedback .bt</find>
       <find>计费方式</find>
       <find>立</find>
+      <find>item_title</find>
+      <find>confirm</find>
+      <find>下一步</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -112,24 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/HeaderMain/Header.css" />
-        <option value="$PROJECT_DIR$/src/Summary/Summary.css" />
-        <option value="$PROJECT_DIR$/src/Summary/Summary.jsx" />
-        <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/src/News/News.js" />
-        <option value="$PROJECT_DIR$/src/News/css.css" />
-        <option value="$PROJECT_DIR$/src/shopResult/css.css" />
-        <option value="$PROJECT_DIR$/src/Request/Request.jsx" />
-        <option value="$PROJECT_DIR$/src/About/About.js" />
-        <option value="$PROJECT_DIR$/src/css.css" />
-        <option value="$PROJECT_DIR$/src/About/css.css" />
-        <option value="$PROJECT_DIR$/src/About/About.jsx" />
-        <option value="$PROJECT_DIR$/src/DataDetail/css.css" />
-        <option value="$PROJECT_DIR$/src/Pay/Pay1.jsx" />
-        <option value="$PROJECT_DIR$/src/Pay/css.css" />
-        <option value="$PROJECT_DIR$/src/Slider/Slider.jsx" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Tools/AsyncComponent.js" />
         <option value="$PROJECT_DIR$/src/Tools/AsyncHighChart.jsx" />
         <option value="$PROJECT_DIR$/src/Tools/AsyncHighChart.js" />
@@ -142,27 +237,45 @@
         <option value="$PROJECT_DIR$/src/News/News.jsx" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Main/Main.jsx" />
-        <option value="$PROJECT_DIR$/src/shopResult/shopResult.jsx" />
         <option value="$PROJECT_DIR$/node_modules/ant-design-pro/lib/Login/map.js" />
         <option value="$PROJECT_DIR$/src/redux/action.js" />
         <option value="$PROJECT_DIR$/src/Header/Header.css" />
-        <option value="$PROJECT_DIR$/src/Vip/Vip.jsx" />
-        <option value="$PROJECT_DIR$/src/Rounters/Rounters.jsx" />
         <option value="$USER_HOME$/Desktop/router.js" />
         <option value="$PROJECT_DIR$/../octupusnode/router.js" />
         <option value="$PROJECT_DIR$/src/ForgetUser/ForgetUser.jsx" />
-        <option value="$PROJECT_DIR$/src/Header/Header.jsx" />
-        <option value="$PROJECT_DIR$/src/Register/Register.jsx" />
-        <option value="$PROJECT_DIR$/src/Pay/Step.jsx" />
-        <option value="$PROJECT_DIR$/src/DataMarket/DataMarket.jsx" />
         <option value="$PROJECT_DIR$/src/DataMarket/css.css" />
         <option value="$PROJECT_DIR$/src/DataCustomization/css.css" />
         <option value="$PROJECT_DIR$/src/DataCustomization/DataCustomization.jsx" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/DataDetail/DataDetail.jsx" />
-        <option value="$PROJECT_DIR$/src/Pay/Pay.jsx" />
-        <option value="$PROJECT_DIR$/src/Login/index.jsx" />
         <option value="$PROJECT_DIR$/src/Login/index.css" />
+        <option value="$PROJECT_DIR$/src/shopResult/shopResult.jsx" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/Pay/Pay.jsx" />
+        <option value="$PROJECT_DIR$/src/Order/Order.jsx" />
+        <option value="$PROJECT_DIR$/build/static/css/3.c58353e7.chunk.css.map" />
+        <option value="$PROJECT_DIR$/build/static/css/9.0bd44884.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/10.ce8de3e9.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/11.b55d2b9f.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/12.71d0bb2c.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/13.8829ac89.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/14.5a0649fc.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/15.5a0649fc.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/16.0b33f1bb.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/17.2cad1bf1.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/19.62929b7c.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/20.f59eb06c.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/21.5a0649fc.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/22.a185115d.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/main.77dfabb8.chunk.css" />
+        <option value="$PROJECT_DIR$/build/static/css/8.80d637cd.chunk.css" />
+        <option value="$PROJECT_DIR$/src/Rounters/Rounters.jsx" />
+        <option value="$USER_HOME$/Desktop/surenjun.conf" />
+        <option value="$PROJECT_DIR$/src/Login/index.jsx" />
+        <option value="$PROJECT_DIR$/src/Register/Register.jsx" />
+        <option value="$PROJECT_DIR$/src/Pay/Step.jsx" />
+        <option value="$PROJECT_DIR$/src/Vip/Vip.jsx" />
+        <option value="$PROJECT_DIR$/src/DataMarket/DataMarket.jsx" />
+        <option value="$PROJECT_DIR$/src/Header/Header.jsx" />
+        <option value="$PROJECT_DIR$/src/DataDetail/DataDetail.jsx" />
       </list>
     </option>
   </component>
@@ -188,25 +301,25 @@
             <path>
               <item name="mytest" type="b2602c69:ProjectViewProjectNode" />
               <item name="mytest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mytest" type="b2602c69:ProjectViewProjectNode" />
               <item name="mytest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mytest" type="b2602c69:ProjectViewProjectNode" />
               <item name="mytest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Register" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mytest" type="b2602c69:ProjectViewProjectNode" />
               <item name="mytest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Request" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -221,8 +334,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../octupusnode" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="C:\Users\Administrator\Desktop\mytest\node_modules\eslint" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -237,6 +353,7 @@
       <recent name="C:\Users\Administrator\Desktop\mytest\src\Header" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Web\mytest\src\Order" />
       <recent name="F:\Web\mytest\src\img" />
       <recent name="C:\Users\Administrator\Desktop\mytest" />
     </key>
@@ -312,21 +429,24 @@
       <workItem from="1557575384306" duration="54000" />
       <workItem from="1558007431710" duration="1048000" />
       <workItem from="1558180157613" duration="4270000" />
-      <workItem from="1558241917261" duration="8057000" />
+      <workItem from="1558241917261" duration="8236000" />
+      <workItem from="1558251404364" duration="7365000" />
+      <workItem from="1558322938567" duration="19904000" />
+      <workItem from="1558350729647" duration="2369000" />
+      <workItem from="1558406361183" duration="3318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198756000" />
+    <option name="totallyTimeSpent" value="231891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3214826" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33207262" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32935154" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -336,7 +456,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.18259385" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.051194537" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32935154" />
       <window_info anchor="bottom" id="Quokka" order="11" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
@@ -373,149 +493,234 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build/static/css/16.15fd5536.chunk.css" />
-    <entry file="file://$PROJECT_DIR$/build/static/css/17.047efa32.chunk.css" />
-    <entry file="file://$PROJECT_DIR$/build/static/css/18.15fd5536.chunk.css" />
-    <entry file="file://$PROJECT_DIR$/build/static/css/main.a1fb9b12.chunk.css" />
-    <entry file="file://$PROJECT_DIR$/build/precache-manifest.5c99af4d1c269e9119a483479207fcdf.js" />
-    <entry file="file://$PROJECT_DIR$/build/service-worker.js" />
-    <entry file="file://$PROJECT_DIR$/build/static/css/19.dd55fba9.chunk.css" />
-    <entry file="file://$PROJECT_DIR$/node_modules/antd/CHANGELOG.zh-CN.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="29">
-            <caret line="26" selection-start-line="26" selection-end-line="26" />
-            <folding>
-              <element signature="e#0#38#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/build/static/css/11.b55d2b9f.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/logo-1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tools/AsyncComponent.js">
+    <entry file="file://$PROJECT_DIR$/build/static/css/12.71d0bb2c.chunk.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.html" />
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" selection-start-line="1" selection-end-line="3" />
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2632#3095#1" expanded="true" />
+            <element signature="e#3252#3619#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tools/AsyncHighChart.js">
+    <entry file="file://$PROJECT_DIR$/build/static/css/13.8829ac89.chunk.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="116" />
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/css/14.5a0649fc.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#341#4728#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/css/15.5a0649fc.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#341#4728#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/css/16.0b33f1bb.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/css/17.2cad1bf1.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#1906#3293#1" expanded="true" />
+            <element signature="e#3372#4847#1" expanded="true" />
+            <element signature="e#4926#6593#1" expanded="true" />
+            <element signature="e#6672#7511#1" expanded="true" />
+            <element signature="e#7590#8721#1" expanded="true" />
+            <element signature="e#8800#10287#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/css/19.62929b7c.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/css/20.f59eb06c.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/css/21.5a0649fc.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#341#4728#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/css/22.a185115d.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/css/main.77dfabb8.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#61286#65673#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/css/3.2f2c0bbe.chunk.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/css/8.80d637cd.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/0.a04cb57e.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/1.917e5f36.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/2.b9195f60.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/3.fcd77c56.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/4.11dd5a33.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/5.609d0276.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/8.de406f73.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/9.245d6b8c.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/10.479b542c.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/11.daefee5b.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/12.cfdaf2a2.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/13.e4030be4.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/14.57ecde25.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/15.1b4569b2.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/16.68dbe430.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/17.c55e51e6.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/18.6d18f8f4.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/19.a5e623d2.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/20.a1ec796b.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/22.a1171ebc.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/23.9f9f2fe1.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/24.b3878aaa.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/main.b1e03d28.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/runtime~main.cb75a557.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/21.937155d3.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/surenjun.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Login/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="38" column="63" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="63" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vip/css.css">
+    <entry file="file://$PROJECT_DIR$/src/Register/Register.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/News/css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/News/News.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="30" column="63" lean-forward="true" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Slider/Slider.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shopResult/shopResult.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/antd/lib/message/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="35" column="38" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HighChart/HighChart.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ant-design-pro/lib/Login/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-435">
-          <caret line="3" column="28" lean-forward="true" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ant-design-pro/lib/Login/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Header/Header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        <state relative-caret-position="-667">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vip/Vip.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+        <state relative-caret-position="203">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -524,146 +729,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Rounters/Rounters.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="35" column="52" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="52" />
+        <state relative-caret-position="116">
+          <caret line="37" column="70" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="70" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../octupusnode/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-435">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#829#4200#0" />
-            <element signature="e#4217#4584#0" />
-            <element signature="e#4630#8192#0" />
-            <element signature="e#8209#9307#0" />
-            <element signature="e#9383#10874#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataMarket/css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="154" column="47" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataCustomization/css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="330" column="19" selection-start-line="330" selection-start-column="19" selection-end-line="330" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataCustomization/DataCustomization.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/wenben.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/sprite.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/mybg1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/alipay.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/union.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/lookthrough.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Request/Request.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ForgetUser/ForgetUser.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pay/Step.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-389">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Register/Register.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataMarket/DataMarket.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="174" column="9" selection-start-line="174" selection-start-column="9" selection-end-line="174" selection-end-column="9" />
+        <state relative-caret-position="-6119">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -672,48 +749,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Pay/Pay.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="106" column="18" lean-forward="true" selection-start-line="106" selection-start-column="18" selection-end-line="106" selection-end-column="18" />
+        <state relative-caret-position="-2320">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pay/Step.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataDetail/DataDetail.jsx">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="532" column="64" selection-start-line="532" selection-start-column="63" selection-end-line="532" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="203">
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Header/Header.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1520">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="281">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login/index.jsx">
+    <entry file="file://$PROJECT_DIR$/src/DataDetail/DataDetail.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="100" column="39" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="39" />
+        <state relative-caret-position="145">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="76" column="22" lean-forward="true" selection-start-line="76" selection-start-column="22" selection-end-line="77" selection-end-column="1" />
         </state>
       </provider>
     </entry>

@@ -15,7 +15,6 @@ const  axios = require("axios");
 const TabPane = Tabs.TabPane;
 
 function callback(key) {
-    console.log(this.state.key);
     this.setState({
         key
     })
